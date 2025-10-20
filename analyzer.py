@@ -92,7 +92,7 @@ class YouTubeAnalyzer:
           "places": [
             {{
               "name": "place name",
-              "description": "comhrehensive description of what is worth seeing there (a few sentences)",
+              "description": "comprehensive description of what is worth seeing there (a few sentences)",
               "type": "one of the types: park, mountains, sea, city, lake, monument, other"
             }}
           ]
