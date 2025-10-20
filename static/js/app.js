@@ -246,14 +246,8 @@ class TripAdvisorApp {
             'sea': 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
             'city': 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
             'lake': 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+            'monument': 'https://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
             'other': 'https://maps.google.com/mapfiles/ms/icons/gray-dot.png',
-            // Polish fallbacks
-            'góry': 'https://maps.google.com/mapfiles/ms/icons/orange-dot.png',
-            'morze': 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
-            'miasto': 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
-            'zabytki': 'https://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
-            'jezioro': 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
-            'inne': 'https://maps.google.com/mapfiles/ms/icons/gray-dot.png'
         };
         return iconMap[type] || iconMap['other'];
     }
@@ -323,15 +317,9 @@ class TripAdvisorApp {
             'mountains': '⛰️',
             'sea': '🌊',
             'city': '🏙️',
+            'monument': '🏛️',
             'lake': '🏞️',
             'other': '📍',
-            // Polish fallbacks
-            'góry': '⛰️',
-            'morze': '🌊',
-            'miasto': '🏙️',
-            'zabytki': '🏛️',
-            'jezioro': '🏞️',
-            'inne': '📍'
         };
 
         Object.entries(typeCounts).forEach(([type, count]) => {
@@ -559,12 +547,12 @@ class TripAdvisorApp {
     getTypeIcon(type) {
         const iconMap = {
             'park': '🌳',
-            'góry': '⛰️',
-            'morze': '🌊',
-            'miasto': '🏙️',
-            'zabytki': '🏛️',
-            'jezioro': '🏞️',
-            'inne': '📍'
+            'mountains': '⛰️',
+            'sea': '🌊',
+            'city': '🏙️',
+            'monument': '🏛️',
+            'lake': '🏞️',
+            'other': '📍'
         };
         return iconMap[type] || '📍';
     }
@@ -572,12 +560,12 @@ class TripAdvisorApp {
     getTypeColor(type) {
         const colorMap = {
             'park': 'bg-green-100 text-green-800',
-            'góry': 'bg-orange-100 text-orange-800',
-            'morze': 'bg-blue-100 text-blue-800',
-            'miasto': 'bg-red-100 text-red-800',
-            'zabytki': 'bg-yellow-100 text-yellow-800',
-            'jezioro': 'bg-blue-100 text-blue-800',
-            'inne': 'bg-gray-100 text-gray-800'
+            'mountains': 'bg-orange-100 text-orange-800',
+            'sea': 'bg-blue-100 text-blue-800',
+            'city': 'bg-red-100 text-red-800',
+            'monument': 'bg-purple-100 text-purple-800',
+            'lake': 'bg-blue-100 text-blue-800',
+            'other': 'bg-gray-100 text-gray-800'
         };
         return colorMap[type] || 'bg-gray-100 text-gray-800';
     }

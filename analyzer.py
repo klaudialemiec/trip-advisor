@@ -93,7 +93,7 @@ class YouTubeAnalyzer:
             {{
               "name": "place name",
               "description": "comhrehensive description of what is worth seeing there (a few sentences)",
-              "type": "one of the types: park, mountains, sea, city, lake, other"
+              "type": "one of the types: park, mountains, sea, city, lake, monument, other"
             }}
           ]
         }}
@@ -140,7 +140,7 @@ class YouTubeAnalyzer:
             if analysis.get("places"):
                 for place in analysis["places"]:
                     if place.get("type") not in VALID_PLACE_TYPES:
-                        place["type"] = "inne"
+                        place["type"] = "other"
 
             logger.info(
                 f"✅ AI analysis completed: {len(analysis.get('places', []))} places found"
@@ -238,14 +238,15 @@ class YouTubeAnalyzer:
                     photos = self._get_place_photos(place_name, location)
 
                     place_id_for_frontend = (
-                        google_place_id or f"place_{index}_{int(location['lat'] * 1000)}"
+                        google_place_id
+                        or f"place_{index}_{int(location['lat'] * 1000)}"
                     )
 
                     return Place(
                         id=place_id_for_frontend,
                         name=place_name,
                         description=place.get("description", ""),
-                        type=place.get("type", "inne"),
+                        type=place.get("type", "other"),
                         coordinates=Coordinates(
                             lat=location["lat"], lng=location["lng"]
                         ),

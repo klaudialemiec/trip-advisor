@@ -33,5 +33,6 @@ VALID_PLACE_TYPES = [
     "sea",
     "city",
     "lake",
+    "monument",
     "other",
 ]

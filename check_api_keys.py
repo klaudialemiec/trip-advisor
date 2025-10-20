@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-"""
-Simple script to check if API keys are properly configured
-"""
-
 import os
 from dotenv import load_dotenv
 
@@ -61,4 +56,3 @@ if __name__ == "__main__":
         print("1. Create a .env file in the project root")
         print("2. Add your OpenAI API key: OPENAI_API_KEY=your_key_here")
         print("3. Get your API key from: https://platform.openai.com/api-keys")
-
