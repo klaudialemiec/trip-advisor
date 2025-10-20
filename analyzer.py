@@ -315,9 +315,9 @@ class YouTubeAnalyzer:
                     )
 
                     if photos:
-                        # Get up to 5 photos
+                        # Get up to 10 photos
                         photo_urls = []
-                        for photo in photos[:5]:
+                        for photo in photos[:10]:
                             photo_name = photo.get("name")
                             if photo_name:
                                 # Use the new photo URL format
